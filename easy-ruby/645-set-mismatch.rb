@@ -27,4 +27,3 @@ def find_error_nums(nums)
     
   [duplicated_num, missing_num]
 end
-
