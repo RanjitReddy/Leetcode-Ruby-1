@@ -15,14 +15,14 @@ def count_smaller(nums)
   final_hash = {}
   
   nums.each_with_index do |num, i|
-      index_to_num_hash[i] = num
-      final_hash[i] ||= 0
-      
-      (0..i - 1).each do |j|
-          if index_to_num_hash[j] > num
-              final_hash[j] += 1
-          end
+    index_to_num_hash[i] = num
+    final_hash[i] ||= 0
+    
+    (0..i - 1).each do |j|
+      if index_to_num_hash[j] > num
+        final_hash[j] += 1
       end
+    end
   end
   
   final_hash.values

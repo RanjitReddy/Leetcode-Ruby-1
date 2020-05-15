@@ -33,9 +33,9 @@ def traverse(root)
   traverse(root.right)
   
   if @prev_node
-      possible_min = (root.val - @prev_node).abs
-      
-      @min_diff = possible_min if @min_diff.nil? || possible_min < @min_diff
+    possible_min = (root.val - @prev_node).abs
+    
+    @min_diff = possible_min if @min_diff.nil? || possible_min < @min_diff
   end
   
   @prev_node = root.val

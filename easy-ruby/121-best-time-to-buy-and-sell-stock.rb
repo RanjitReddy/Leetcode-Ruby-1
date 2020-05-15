@@ -22,8 +22,8 @@ def max_profit(prices)
   buy_price = prices[0]
     
   (1..prices.size - 1).each do |index|
-      buy_price = [buy_price, prices[index - 1]].min
-      max_profit = [max_profit, prices[index] - buy_price].max
+    buy_price = [buy_price, prices[index - 1]].min
+    max_profit = [max_profit, prices[index] - buy_price].max
   end
     
   max_profit

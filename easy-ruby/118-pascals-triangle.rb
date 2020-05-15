@@ -20,18 +20,17 @@ def generate(num_rows)
   return rows if num_rows == 1
   
   (2..num_rows).each do |index|
-      array = []
-      
-      (0..index - 1).each do |checker|
-          if checker == 0 || checker == index - 1
-              array << 1 
-          else
-              array << rows.last[checker] + rows.last[checker - 1]
-          end
-          
+    array = []
+    
+    (0..index - 1).each do |checker|
+      if checker == 0 || checker == index - 1
+        array << 1 
+      else
+        array << rows.last[checker] + rows.last[checker - 1]
       end
-      
-      rows << array
+    end
+    
+    rows << array
   end
   
   rows

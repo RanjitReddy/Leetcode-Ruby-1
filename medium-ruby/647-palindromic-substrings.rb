@@ -24,11 +24,11 @@ def count_substrings(s)
   counter = 0  
     
   (0..s.size - 1).each do |start|
-      (start..s.size - 1).each do |finish|
-          string = s[start..finish]
-          
-          counter += 1 if string.reverse == string
-      end
+    (start..s.size - 1).each do |finish|
+      string = s[start..finish]
+      
+      counter += 1 if string.reverse == string
+    end
   end
     
   counter

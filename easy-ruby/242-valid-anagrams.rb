@@ -21,8 +21,8 @@ def is_anagram(s, t)
   t = t.split('')
   
   (0..(s.size - 1)).each do |i|
-      s_hash[s[i]] += 1
-      t_hash[t[i]] += 1
+    s_hash[s[i]] += 1
+    t_hash[t[i]] += 1
   end
   
   s_hash == t_hash

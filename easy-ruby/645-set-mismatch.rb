@@ -16,13 +16,13 @@ def find_error_nums(nums)
   missing_num = nil
     
   nums.each_with_index do |num, index|
-      nums_hash[num] += 1
+    nums_hash[num] += 1
       
-      duplicated_num = num if nums_hash[num] == 2
+    duplicated_num = num if nums_hash[num] == 2
   end
     
   (1..nums.size).each do |counter|
-      missing_num = counter if nums_hash[counter] == 0
+    missing_num = counter if nums_hash[counter] == 0
   end
     
   [duplicated_num, missing_num]

@@ -15,13 +15,13 @@ def iterate_and_find_min(time_points)
   min = 1440
   
   time_points.each_with_index do |time, index|        
-      prev_time = time_points[index - 1]
-      
-      min = [
-          min,
-          (time - prev_time).abs,
-          1440 - prev_time + time
-      ].min
+    prev_time = time_points[index - 1]
+    
+    min = [
+      min,
+      (time - prev_time).abs,
+      1440 - prev_time + time
+    ].min
   end
   
   min
@@ -29,7 +29,7 @@ end
 
 def set_time_points_to_numbers(time_points)
   time_points.each_with_index do |time, index|
-      time_points[index] = minutes(time)
+    time_points[index] = minutes(time)
   end
   
   time_points.sort
